@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum PhotosSearchEndPoint {
+enum PhotoSearchEndPoint {
     case searhPhoto(searchText:String)
 }
 
-extension PhotosSearchEndPoint:EndPointProtocol,ConstantsProtocol ,CommonParametersProtocol {
+extension PhotoSearchEndPoint:EndPointProtocol,ConstantsProtocol ,CommonParametersProtocol {
         
     var httpMethod: HttpMethod {
         .get
@@ -35,7 +35,7 @@ extension PhotosSearchEndPoint:EndPointProtocol,ConstantsProtocol ,CommonParamet
             parameters["text"] = searchText
             return .requestWithParameters(param: parameters)
         }
-    }    
+    }
 }
 
 

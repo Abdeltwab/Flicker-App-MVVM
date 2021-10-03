@@ -11,8 +11,9 @@
 		4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */; };
 		4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226836270A1E7600ED8009 /* EndPointProtocol.swift */; };
 		4F22683A270A209900ED8009 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226839270A209900ED8009 /* APIService.swift */; };
-		4F226844270A2CB900ED8009 /* PhotosSearchEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226843270A2CB900ED8009 /* PhotosSearchEndPoint.swift */; };
+		4F226844270A2CB900ED8009 /* PhotoSearchEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226843270A2CB900ED8009 /* PhotoSearchEndPoint.swift */; };
 		4F226847270A2FFF00ED8009 /* CommonParametersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226846270A2FFF00ED8009 /* CommonParametersProtocol.swift */; };
+		4F226849270A55A500ED8009 /* PhotoSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226848270A55A500ED8009 /* PhotoSearchService.swift */; };
 		4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE33270A03F600C3F848 /* AppDelegate.swift */; };
 		4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE35270A03F600C3F848 /* SceneDelegate.swift */; };
 		4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE37270A03F600C3F848 /* ViewController.swift */; };
@@ -26,8 +27,9 @@
 		4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProtocol.swift; sourceTree = "<group>"; };
 		4F226836270A1E7600ED8009 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
 		4F226839270A209900ED8009 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		4F226843270A2CB900ED8009 /* PhotosSearchEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSearchEndPoint.swift; sourceTree = "<group>"; };
+		4F226843270A2CB900ED8009 /* PhotoSearchEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchEndPoint.swift; sourceTree = "<group>"; };
 		4F226846270A2FFF00ED8009 /* CommonParametersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonParametersProtocol.swift; sourceTree = "<group>"; };
+		4F226848270A55A500ED8009 /* PhotoSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchService.swift; sourceTree = "<group>"; };
 		4F64BE30270A03F600C3F848 /* FlickerApp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickerApp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F64BE33270A03F600C3F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F64BE35270A03F600C3F848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,17 +123,11 @@
 		4F226841270A2C9D00ED8009 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4F226842270A2CA200ED8009 /* EndPoint */,
+				4F22684C270A5E2300ED8009 /* Model */,
+				4F226843270A2CB900ED8009 /* PhotoSearchEndPoint.swift */,
+				4F226848270A55A500ED8009 /* PhotoSearchService.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		4F226842270A2CA200ED8009 /* EndPoint */ = {
-			isa = PBXGroup;
-			children = (
-				4F226843270A2CB900ED8009 /* PhotosSearchEndPoint.swift */,
-			);
-			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		4F226845270A2FEA00ED8009 /* CommonParamaters */ = {
@@ -140,6 +136,13 @@
 				4F226846270A2FFF00ED8009 /* CommonParametersProtocol.swift */,
 			);
 			path = CommonParamaters;
+			sourceTree = "<group>";
+		};
+		4F22684C270A5E2300ED8009 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4F64BE27270A03F600C3F848 = {
@@ -260,11 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */,
-				4F226844270A2CB900ED8009 /* PhotosSearchEndPoint.swift in Sources */,
+				4F226844270A2CB900ED8009 /* PhotoSearchEndPoint.swift in Sources */,
 				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
 				4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */,
 				4F226847270A2FFF00ED8009 /* CommonParametersProtocol.swift in Sources */,
+				4F226849270A55A500ED8009 /* PhotoSearchService.swift in Sources */,
 				4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */,
 				4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */,
 				4F22682F270A0D6000ED8009 /* Constants.swift in Sources */,

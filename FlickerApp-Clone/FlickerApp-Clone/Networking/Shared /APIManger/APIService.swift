@@ -10,9 +10,11 @@ import Foundation
 
 class APIService<T> where T:EndPointProtocol {
 
-    func request<D: Decodable>(target: T ,completion: @escaping (Result<D, Error>) -> Void) {
-        let request = target.request
     
+    func request<D: Decodable>(target: T ,completion: @escaping (Result<D, Error>) -> Void) {
+        var request = target.request
+        request.httpMethod = target.httpMethod.rawValue
+        
         URLSession.shared.dataTask(with: request) { data, response, error in
             do {
                 if let error = error {
