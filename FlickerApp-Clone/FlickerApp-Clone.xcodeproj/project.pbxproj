@@ -56,15 +56,31 @@
 		4F64BE32270A03F600C3F848 /* FlickerApp-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				4F64BE33270A03F600C3F848 /* AppDelegate.swift */,
-				4F64BE35270A03F600C3F848 /* SceneDelegate.swift */,
+				4F64BE47270A050300C3F848 /* Core */,
+				4F64BE48270A051800C3F848 /* Resources */,
 				4F64BE37270A03F600C3F848 /* ViewController.swift */,
 				4F64BE39270A03F600C3F848 /* Main.storyboard */,
-				4F64BE3C270A03F900C3F848 /* Assets.xcassets */,
-				4F64BE3E270A03F900C3F848 /* LaunchScreen.storyboard */,
 				4F64BE41270A03F900C3F848 /* Info.plist */,
 			);
 			path = "FlickerApp-Clone";
+			sourceTree = "<group>";
+		};
+		4F64BE47270A050300C3F848 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4F64BE33270A03F600C3F848 /* AppDelegate.swift */,
+				4F64BE35270A03F600C3F848 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4F64BE48270A051800C3F848 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F64BE3C270A03F900C3F848 /* Assets.xcassets */,
+				4F64BE3E270A03F900C3F848 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
