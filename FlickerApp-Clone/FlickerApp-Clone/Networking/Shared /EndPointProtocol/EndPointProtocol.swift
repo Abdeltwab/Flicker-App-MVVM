@@ -9,33 +9,44 @@ import Foundation
 
 protocol EndPointProtocol {
     
-    var baseURL: URL { get }
+    var baseURL: String { get }
 
     var path: String { get }
-
-//    var httpMethod: HttpMethod { get }
     
-    var request: URLRequest { get }
+    var httpMethod: HttpMethod { get }
+        
+    var task: Task { get }
     
-//    var requestType: RequestType { get }
-
+    var request:URLRequest {get}
 }
 
 
+extension EndPointProtocol {
+    
+    var request: URLRequest {
+        switch task {
+        case .requestPlain:
+            return URLRequest(url: createURL())
+        case let .requestWithParameters(param):
+            return URLRequest(url: createURL(params: param))
+        }
+    }
+    
+    func createURL(params: [String: String] = [:] ) -> URL {
+        var components = URLComponents(string: baseURL)
+        components?.queryItems?.append(URLQueryItem(name: "method", value: path))
+        components?.queryItems = params.map { param in URLQueryItem(name: param.key, value: param.value) }
+        return (components?.url)!
+    }
+}
 
 enum HttpMethod:String {
     case get   = "GET"
     case post  = "POST"
 }
 
-
-enum RequestType {
+enum Task {
     case requestPlain
-}
-
-
-extension RequestType {
-    
-    
+    case requestWithParameters(param: [String:String])
 }
 

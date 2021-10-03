@@ -12,8 +12,12 @@ enum PhotosSearchEndPoint {
 }
 
 extension PhotosSearchEndPoint:EndPointProtocol,ConstantsProtocol ,CommonParametersProtocol {
+        
+    var httpMethod: HttpMethod {
+        .get
+    }
     
-    var baseURL: URL {
+    var baseURL: String {
         return flickerBaseURL
     }
     
@@ -24,21 +28,14 @@ extension PhotosSearchEndPoint:EndPointProtocol,ConstantsProtocol ,CommonParamet
         }
     }
     
-    var request: URLRequest {
+    var task: Task {
         switch self {
-
         case let .searhPhoto(searchText):
             var parameters = commonParameters
             parameters["text"] = searchText
-            return URLRequest(url: URL(string: "")!)
-            
+            return .requestWithParameters(param: parameters)
         }
-    }
-    
+    }    
 }
 
-
-enum requestType {
-    case requestPlain
-}
 

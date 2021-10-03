@@ -11,7 +11,7 @@ protocol ConstantsProtocol {
     
     var flickerApiKey : String {get}
     var flickerApiSecret : String {get}
-    var flickerBaseURL : URL {get}
+    var flickerBaseURL : String {get}
 }
 
 extension ConstantsProtocol {
@@ -23,7 +23,7 @@ extension ConstantsProtocol {
         return APIConstant.flickerApiSecret.rawValue
     }
     
-    var flickerBaseURL:URL {
-        return URL(string: APIConstant.flickerBaseURL.rawValue)!
+    var flickerBaseURL:String {
+        return APIConstant.flickerBaseURL.rawValue
     }
 }
