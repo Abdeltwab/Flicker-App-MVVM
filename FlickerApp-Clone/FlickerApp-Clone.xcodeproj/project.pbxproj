@@ -39,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F226830270A16B800ED8009 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4F22682E270A0D6000ED8009 /* Constants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		4F64BE27270A03F600C3F848 = {
 			isa = PBXGroup;
 			children = (
@@ -63,7 +71,7 @@
 				4F64BE37270A03F600C3F848 /* ViewController.swift */,
 				4F64BE39270A03F600C3F848 /* Main.storyboard */,
 				4F64BE41270A03F900C3F848 /* Info.plist */,
-				4F22682E270A0D6000ED8009 /* Constants.swift */,
+				4F226830270A16B800ED8009 /* Networking */,
 			);
 			path = "FlickerApp-Clone";
 			sourceTree = "<group>";
