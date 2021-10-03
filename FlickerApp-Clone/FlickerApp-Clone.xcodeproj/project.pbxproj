@@ -57,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1BF338270A750700A0390F /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				4F226843270A2CB900ED8009 /* PhotoSearchEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		4F1BF339270A751200A0390F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F226848270A55A500ED8009 /* PhotoSearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		4F226830270A16B800ED8009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,9 +145,9 @@
 		4F226841270A2C9D00ED8009 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4F22684C270A5E2300ED8009 /* Model */,
-				4F226843270A2CB900ED8009 /* PhotoSearchEndPoint.swift */,
-				4F226848270A55A500ED8009 /* PhotoSearchService.swift */,
+				4F1BF339270A751200A0390F /* Services */,
+				4F1BF338270A750700A0390F /* EndPoints */,
+				4F22684C270A5E2300ED8009 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -144,14 +160,14 @@
 			path = CommonParamaters;
 			sourceTree = "<group>";
 		};
-		4F22684C270A5E2300ED8009 /* Model */ = {
+		4F22684C270A5E2300ED8009 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4F1BF332270A70F800A0390F /* Photo.swift */,
 				4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */,
 				4F1BF336270A743600A0390F /* SearchPhotos.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4F64BE27270A03F600C3F848 = {

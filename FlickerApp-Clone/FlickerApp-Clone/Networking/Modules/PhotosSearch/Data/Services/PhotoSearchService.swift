@@ -11,8 +11,8 @@ import Foundation
 
 class PhotoSearchService: APIService<PhotoSearchEndPoint> {
   
-//    func serachPhotoByText(_ text: String, completion: @escaping (Result<Feed, Error>) -> Void){
-//      //  request(target: .searhPhoto(searchText: text), completion: completion)
-//    }
+    func serachPhotoByText(_ text: String, completion: @escaping (Result<PhotoSearchResult, Error>) -> Void){
+        request(target: .searhPhoto(searchText: text), completion: completion)
+    }
  
 }
