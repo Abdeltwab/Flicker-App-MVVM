@@ -15,7 +15,10 @@ protocol EndPointProtocol {
 
     var httpMethod: HttpMethod { get }
     
-    var requestType: RequestType { get }
+    var request: URLRequest { get }
+    
+//    var requestType: RequestType { get }
+
 }
 
 
@@ -25,9 +28,3 @@ enum HttpMethod:String {
     case post  = "POST"
 }
 
-
-
-enum RequestType {
-    case requestPlain
-    case requestWithParameters (_ parameters: [String: Any])
-}

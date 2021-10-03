@@ -10,6 +10,7 @@
 		4F22682F270A0D6000ED8009 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F22682E270A0D6000ED8009 /* Constants.swift */; };
 		4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */; };
 		4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226836270A1E7600ED8009 /* EndPointProtocol.swift */; };
+		4F22683A270A209900ED8009 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226839270A209900ED8009 /* APIService.swift */; };
 		4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE33270A03F600C3F848 /* AppDelegate.swift */; };
 		4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE35270A03F600C3F848 /* SceneDelegate.swift */; };
 		4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE37270A03F600C3F848 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		4F22682E270A0D6000ED8009 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProtocol.swift; sourceTree = "<group>"; };
 		4F226836270A1E7600ED8009 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
+		4F226839270A209900ED8009 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		4F64BE30270A03F600C3F848 /* FlickerApp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickerApp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F64BE33270A03F600C3F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F64BE35270A03F600C3F848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		4F226830270A16B800ED8009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4F22683B270A252D00ED8009 /* Module */,
 				4F226831270A17A900ED8009 /* Shared  */,
 			);
 			path = Networking;
@@ -54,6 +57,7 @@
 		4F226831270A17A900ED8009 /* Shared  */ = {
 			isa = PBXGroup;
 			children = (
+				4F226838270A207D00ED8009 /* APIManger */,
 				4F226835270A1E2A00ED8009 /* EndPoint */,
 				4F226832270A1D3000ED8009 /* Constants */,
 			);
@@ -75,6 +79,21 @@
 				4F226836270A1E7600ED8009 /* EndPointProtocol.swift */,
 			);
 			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		4F226838270A207D00ED8009 /* APIManger */ = {
+			isa = PBXGroup;
+			children = (
+				4F226839270A209900ED8009 /* APIService.swift */,
+			);
+			path = APIManger;
+			sourceTree = "<group>";
+		};
+		4F22683B270A252D00ED8009 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		4F64BE27270A03F600C3F848 = {
@@ -195,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */,
+				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
 				4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */,
 				4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */,
