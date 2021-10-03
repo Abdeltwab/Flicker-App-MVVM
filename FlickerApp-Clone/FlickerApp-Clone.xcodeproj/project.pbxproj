@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F1BF333270A70F800A0390F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF332270A70F800A0390F /* Photo.swift */; };
+		4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */; };
+		4F1BF337270A743600A0390F /* SearchPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF336270A743600A0390F /* SearchPhotos.swift */; };
 		4F22682F270A0D6000ED8009 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F22682E270A0D6000ED8009 /* Constants.swift */; };
 		4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */; };
 		4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226836270A1E7600ED8009 /* EndPointProtocol.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F1BF332270A70F800A0390F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchResult.swift; sourceTree = "<group>"; };
+		4F1BF336270A743600A0390F /* SearchPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotos.swift; sourceTree = "<group>"; };
 		4F22682E270A0D6000ED8009 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProtocol.swift; sourceTree = "<group>"; };
 		4F226836270A1E7600ED8009 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 		4F22684C270A5E2300ED8009 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F1BF332270A70F800A0390F /* Photo.swift */,
+				4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */,
+				4F1BF336270A743600A0390F /* SearchPhotos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,12 +272,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */,
+				4F1BF337270A743600A0390F /* SearchPhotos.swift in Sources */,
 				4F226844270A2CB900ED8009 /* PhotoSearchEndPoint.swift in Sources */,
 				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
 				4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */,
+				4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */,
 				4F226847270A2FFF00ED8009 /* CommonParametersProtocol.swift in Sources */,
 				4F226849270A55A500ED8009 /* PhotoSearchService.swift in Sources */,
+				4F1BF333270A70F800A0390F /* Photo.swift in Sources */,
 				4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */,
 				4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */,
 				4F22682F270A0D6000ED8009 /* Constants.swift in Sources */,
