@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F22682F270A0D6000ED8009 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F22682E270A0D6000ED8009 /* Constants.swift */; };
 		4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE33270A03F600C3F848 /* AppDelegate.swift */; };
 		4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE35270A03F600C3F848 /* SceneDelegate.swift */; };
 		4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE37270A03F600C3F848 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F22682E270A0D6000ED8009 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F64BE30270A03F600C3F848 /* FlickerApp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickerApp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F64BE33270A03F600C3F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F64BE35270A03F600C3F848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F226830270A16B800ED8009 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4F22682E270A0D6000ED8009 /* Constants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		4F64BE27270A03F600C3F848 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +66,32 @@
 		4F64BE32270A03F600C3F848 /* FlickerApp-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				4F64BE33270A03F600C3F848 /* AppDelegate.swift */,
-				4F64BE35270A03F600C3F848 /* SceneDelegate.swift */,
+				4F64BE47270A050300C3F848 /* Core */,
+				4F64BE48270A051800C3F848 /* Resources */,
 				4F64BE37270A03F600C3F848 /* ViewController.swift */,
 				4F64BE39270A03F600C3F848 /* Main.storyboard */,
-				4F64BE3C270A03F900C3F848 /* Assets.xcassets */,
-				4F64BE3E270A03F900C3F848 /* LaunchScreen.storyboard */,
 				4F64BE41270A03F900C3F848 /* Info.plist */,
+				4F226830270A16B800ED8009 /* Networking */,
 			);
 			path = "FlickerApp-Clone";
+			sourceTree = "<group>";
+		};
+		4F64BE47270A050300C3F848 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4F64BE33270A03F600C3F848 /* AppDelegate.swift */,
+				4F64BE35270A03F600C3F848 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4F64BE48270A051800C3F848 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F64BE3C270A03F900C3F848 /* Assets.xcassets */,
+				4F64BE3E270A03F900C3F848 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 				4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
 				4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */,
+				4F22682F270A0D6000ED8009 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
