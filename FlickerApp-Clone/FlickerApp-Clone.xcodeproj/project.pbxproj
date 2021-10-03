@@ -42,9 +42,17 @@
 		4F226830270A16B800ED8009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				4F22682E270A0D6000ED8009 /* Constants.swift */,
+				4F226831270A17A900ED8009 /* Shard  */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		4F226831270A17A900ED8009 /* Shard  */ = {
+			isa = PBXGroup;
+			children = (
+				4F22682E270A0D6000ED8009 /* Constants.swift */,
+			);
+			path = "Shard ";
 			sourceTree = "<group>";
 		};
 		4F64BE27270A03F600C3F848 = {
