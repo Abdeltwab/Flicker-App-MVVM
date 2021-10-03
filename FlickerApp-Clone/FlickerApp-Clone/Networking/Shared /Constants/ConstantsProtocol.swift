@@ -9,21 +9,21 @@ import Foundation
 
 protocol ConstantsProtocol {
     
-    var apiKey : String {get}
-    var apiSecret : String {get}
-    var baseURL : String {get}
+    var flickerApiKey : String {get}
+    var flickerApiSecret : String {get}
+    var flickerBaseURL : URL {get}
 }
 
 extension ConstantsProtocol {
-    var apiKey:String {
-        return APIConstant.apiKey.rawValue
+    var flickerApiKey:String {
+        return APIConstant.flickerApiKey.rawValue
     }
     
-    var apiSecret:String {
-        return APIConstant.apiSecret.rawValue
+    var flickerApiSecret:String {
+        return APIConstant.flickerApiSecret.rawValue
     }
     
-    var baseURL:String {
-        return APIConstant.baseURL.rawValue
+    var flickerBaseURL:URL {
+        return URL(string: APIConstant.flickerBaseURL.rawValue)!
     }
 }

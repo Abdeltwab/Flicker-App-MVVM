@@ -13,7 +13,7 @@ protocol EndPointProtocol {
 
     var path: String { get }
 
-    var httpMethod: HttpMethod { get }
+//    var httpMethod: HttpMethod { get }
     
     var request: URLRequest { get }
     
@@ -26,5 +26,16 @@ protocol EndPointProtocol {
 enum HttpMethod:String {
     case get   = "GET"
     case post  = "POST"
+}
+
+
+enum RequestType {
+    case requestPlain
+}
+
+
+extension RequestType {
+    
+    
 }
 
