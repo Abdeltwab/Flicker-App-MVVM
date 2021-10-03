@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Environment:String{
+enum APIConstant:String{
 
     case apiKey = "2670f92104ed6e145b307d42fdd41209"
     case apiSecret = "4ddf5e5098930327"
