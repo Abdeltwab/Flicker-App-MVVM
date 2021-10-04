@@ -10,6 +10,8 @@
 		4F1BF333270A70F800A0390F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF332270A70F800A0390F /* Photo.swift */; };
 		4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */; };
 		4F1BF337270A743600A0390F /* SearchPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF336270A743600A0390F /* SearchPhotos.swift */; };
+		4F1BF33C270A757900A0390F /* PhotoSearchProtocl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF33B270A757900A0390F /* PhotoSearchProtocl.swift */; };
+		4F1BF33F270A762A00A0390F /* CallBacksTypeAliase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BF33E270A762A00A0390F /* CallBacksTypeAliase.swift */; };
 		4F22682F270A0D6000ED8009 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F22682E270A0D6000ED8009 /* Constants.swift */; };
 		4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */; };
 		4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F226836270A1E7600ED8009 /* EndPointProtocol.swift */; };
@@ -29,6 +31,8 @@
 		4F1BF332270A70F800A0390F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchResult.swift; sourceTree = "<group>"; };
 		4F1BF336270A743600A0390F /* SearchPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotos.swift; sourceTree = "<group>"; };
+		4F1BF33B270A757900A0390F /* PhotoSearchProtocl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchProtocl.swift; sourceTree = "<group>"; };
+		4F1BF33E270A762A00A0390F /* CallBacksTypeAliase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBacksTypeAliase.swift; sourceTree = "<group>"; };
 		4F22682E270A0D6000ED8009 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4F226833270A1D4100ED8009 /* ConstantsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsProtocol.swift; sourceTree = "<group>"; };
 		4F226836270A1E7600ED8009 /* EndPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
@@ -73,6 +77,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		4F1BF33A270A756600A0390F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4F1BF33B270A757900A0390F /* PhotoSearchProtocl.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4F1BF33D270A75FB00A0390F /* Typealias */ = {
+			isa = PBXGroup;
+			children = (
+				4F1BF33E270A762A00A0390F /* CallBacksTypeAliase.swift */,
+			);
+			path = Typealias;
+			sourceTree = "<group>";
+		};
 		4F226830270A16B800ED8009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,7 @@
 		4F226831270A17A900ED8009 /* Shared  */ = {
 			isa = PBXGroup;
 			children = (
+				4F1BF33D270A75FB00A0390F /* Typealias */,
 				4F226845270A2FEA00ED8009 /* CommonParamaters */,
 				4F226838270A207D00ED8009 /* APIManger */,
 				4F226835270A1E2A00ED8009 /* EndPointProtocol */,
@@ -131,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				4F226841270A2C9D00ED8009 /* Data */,
+				4F1BF33A270A756600A0390F /* Domain */,
 			);
 			path = PhotosSearch;
 			sourceTree = "<group>";
@@ -145,9 +167,9 @@
 		4F226841270A2C9D00ED8009 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4F22684C270A5E2300ED8009 /* Models */,
 				4F1BF339270A751200A0390F /* Services */,
 				4F1BF338270A750700A0390F /* EndPoints */,
-				4F22684C270A5E2300ED8009 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -289,8 +311,10 @@
 			files = (
 				4F64BE38270A03F600C3F848 /* ViewController.swift in Sources */,
 				4F1BF337270A743600A0390F /* SearchPhotos.swift in Sources */,
+				4F1BF33F270A762A00A0390F /* CallBacksTypeAliase.swift in Sources */,
 				4F226844270A2CB900ED8009 /* PhotoSearchEndPoint.swift in Sources */,
 				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
+				4F1BF33C270A757900A0390F /* PhotoSearchProtocl.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
 				4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */,
 				4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */,
