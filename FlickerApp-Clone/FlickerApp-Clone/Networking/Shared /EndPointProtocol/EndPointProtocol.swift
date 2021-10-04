@@ -38,7 +38,6 @@ extension EndPointProtocol {
         parameters["method"] = path
         components?.queryItems?.append(URLQueryItem(name: "method", value: path))
         components?.queryItems = parameters.map { param in URLQueryItem(name: param.key, value: param.value) }
-        print(components?.url!)
         return (components?.url)!
     }
 }

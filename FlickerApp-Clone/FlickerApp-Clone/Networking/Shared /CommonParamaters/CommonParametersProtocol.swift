@@ -15,7 +15,7 @@ protocol CommonParametersProtocol:ConstantsProtocol {
 extension CommonParametersProtocol {
     
     var commonParameters: [String: String] {
-        return ["api_key": flickerApiKey , "format":"json"]
+        return ["api_key": flickerApiKey , "format":"json" , "nojsoncallback":"1"]
     }
     
 }
