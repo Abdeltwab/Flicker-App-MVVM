@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct PhotoSearchResult :Decodable {
+struct PhotoSearchResult :Codable {
     
-    let status: String?
-    let photos: Photos?
-
-    enum CodingKeys: String, CodingKey {
-        case status = "stat"
+    let photos: Photos
+    let status: String
+    
+    enum CodingKeys: String, CodingKey{
         case photos
+        case status = "stat"
     }
 }
 

@@ -7,13 +7,8 @@
 
 import Foundation
 
-struct Photo :Decodable {
-    
+struct Photo: Codable {
     let id: String
-    let title: URL
-
-    enum CodingKeys: String, CodingKey {
-        case id, title
-    }
+    let title: String
 }
 

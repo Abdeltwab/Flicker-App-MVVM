@@ -7,19 +7,10 @@
 
 import Foundation
 
-struct Photos: Decodable {
+struct Photos: Codable {
     let page: Int
     let pages: Int
     let perpage: Int
+    let total: Int
     let photo: [Photo]
-    let total: String
-    
-    enum CodingKeys: String, CodingKey {
-        case page
-        case pages
-        case perpage
-        case photo
-        case total
-    }
-    
 }

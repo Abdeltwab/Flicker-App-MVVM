@@ -34,8 +34,11 @@ extension EndPointProtocol {
     
     func createURL(params: [String: String] = [:] ) -> URL {
         var components = URLComponents(string: baseURL)
+        var parameters = params
+        parameters["method"] = path
         components?.queryItems?.append(URLQueryItem(name: "method", value: path))
-        components?.queryItems = params.map { param in URLQueryItem(name: param.key, value: param.value) }
+        components?.queryItems = parameters.map { param in URLQueryItem(name: param.key, value: param.value) }
+        print(components?.url!)
         return (components?.url)!
     }
 }
