@@ -5,8 +5,11 @@
 //  Created by Abdeltawab Mohamed on 05/10/2021.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
-class PhotoGalleryContainerViewModel {
+class PhotoGalleryContainerViewModel:PhotoGalleryContainerViewModelProtocol {
     
+    let searchText = BehaviorRelay<String>(value: "")
+
 }

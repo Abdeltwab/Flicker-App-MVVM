@@ -5,8 +5,9 @@
 //  Created by Abdeltawab Mohamed on 05/10/2021.
 //
 
-import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 
 enum PhotoGalleryContainerRoute{
@@ -19,3 +20,9 @@ protocol PhotoGalleryContainerViewControllerProtocol {
     var viewModel: PhotoGalleryContainerViewModel?  { get }
 
 }
+
+//MARK: - ViewModel
+protocol PhotoGalleryContainerViewModelProtocol {
+    var searchText: BehaviorRelay<String> {get}
+}
+

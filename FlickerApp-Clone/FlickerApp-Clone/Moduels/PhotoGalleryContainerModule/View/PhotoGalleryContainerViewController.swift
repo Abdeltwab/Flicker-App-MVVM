@@ -12,6 +12,7 @@ import RxSwift
 
 class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate ,PhotoGalleryContainerViewControllerProtocol {
     
+    private let disposeBag = DisposeBag()
     var viewModel: PhotoGalleryContainerViewModel?
     
     
@@ -25,6 +26,7 @@ class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate
         guard let viewModel = viewModel else {return}
         viewModel.route(to: .photoGallery(view: searchResultsContianerView), from: self)
         setupUI()
+        setupUIBinding()
     }
 }
 
@@ -32,6 +34,7 @@ class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate
 extension PhotoGalleryContainerViewController{
     
     private func setupUI(){
+        
         setupNavigationBarTitle()
         setupSearchController()
     }
@@ -50,4 +53,30 @@ extension PhotoGalleryContainerViewController{
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+}
+
+
+//MARK: Binding
+extension PhotoGalleryContainerViewController {
+    
+    private func setupUIBinding(){
+        bindSearhTextField()
+    }
+    
+    
+    private func bindSearhTextField() {
+        searchController.searchBar.rx.text
+            .do { [weak self](searchText) in
+                guard let self = self else {return}
+                guard let viewModel = self.viewModel else {return}
+                if viewModel.searchText.value == searchText {
+                    return
+                }else{
+                    viewModel.searchText.accept(searchText ?? "")
+                }
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
 }
