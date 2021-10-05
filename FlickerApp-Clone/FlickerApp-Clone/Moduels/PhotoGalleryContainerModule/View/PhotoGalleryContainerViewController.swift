@@ -6,16 +6,23 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
-class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate {
+
+class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate ,PhotoGalleryContainerViewControllerProtocol {
+    
+    var viewModel: PhotoGalleryContainerViewModel?
+    
     
     @IBOutlet weak var searchResultsContianerView: UIView!
     var searchController: UISearchController!
     
-    let viewModel = PhotoGalleryContainerViewModel()
-
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let viewModel = viewModel else {return}
         viewModel.route(to: .photoGallery(view: searchResultsContianerView), from: self)
         setupUI()
     }

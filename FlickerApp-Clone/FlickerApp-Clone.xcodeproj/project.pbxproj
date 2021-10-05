@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		4F3720AB270C63CD0023465B /* PhotoGalleryContainerViewModel+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720AA270C63CD0023465B /* PhotoGalleryContainerViewModel+Routing.swift */; };
 		4F3720AE270C64F70023465B /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720AC270C64F70023465B /* PhotoGalleryViewController.swift */; };
 		4F3720AF270C64F70023465B /* PhotoGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F3720AD270C64F70023465B /* PhotoGalleryViewController.xib */; };
+		4F3720B6270C97C50023465B /* PhotoGalleryContainerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720B5270C97C50023465B /* PhotoGalleryContainerContract.swift */; };
 		4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE33270A03F600C3F848 /* AppDelegate.swift */; };
 		4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE35270A03F600C3F848 /* SceneDelegate.swift */; };
 		4F64BE3D270A03F900C3F848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F64BE3C270A03F900C3F848 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		4F3720AA270C63CD0023465B /* PhotoGalleryContainerViewModel+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoGalleryContainerViewModel+Routing.swift"; sourceTree = "<group>"; };
 		4F3720AC270C64F70023465B /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		4F3720AD270C64F70023465B /* PhotoGalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryViewController.xib; sourceTree = "<group>"; };
+		4F3720B5270C97C50023465B /* PhotoGalleryContainerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryContainerContract.swift; sourceTree = "<group>"; };
 		4F64BE30270A03F600C3F848 /* FlickerApp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickerApp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F64BE33270A03F600C3F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F64BE35270A03F600C3F848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4F3720B4270C97920023465B /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720B5270C97C50023465B /* PhotoGalleryContainerContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
 		4F64BE27270A03F600C3F848 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +326,7 @@
 		4F730F57270B026100418D8C /* PhotoGalleryContainerModule */ = {
 			isa = PBXGroup;
 			children = (
+				4F3720B4270C97920023465B /* Contract */,
 				4F3720A7270C62E50023465B /* ViewModel */,
 				4F3720A1270C62120023465B /* View */,
 			);
@@ -336,7 +347,6 @@
 				4F0B29270E6642B5398A18B0 /* Pods-FlickerApp-Clone.debug.xcconfig */,
 				25EF7D1D4A8797A671272CA5 /* Pods-FlickerApp-Clone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -467,6 +477,7 @@
 				4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */,
 				4F226847270A2FFF00ED8009 /* CommonParametersProtocol.swift in Sources */,
 				4F226849270A55A500ED8009 /* PhotoSearchService.swift in Sources */,
+				4F3720B6270C97C50023465B /* PhotoGalleryContainerContract.swift in Sources */,
 				4F1BF333270A70F800A0390F /* Photo.swift in Sources */,
 				4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */,
 				4F226834270A1D4100ED8009 /* ConstantsProtocol.swift in Sources */,

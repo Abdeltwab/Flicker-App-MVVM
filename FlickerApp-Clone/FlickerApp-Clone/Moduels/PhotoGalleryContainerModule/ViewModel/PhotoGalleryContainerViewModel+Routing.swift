@@ -8,9 +8,7 @@
 import UIKit
 
 
-enum PhotoGalleryContainerRoute{
-    case photoGallery(view:UIView)
-}
+
 
 extension PhotoGalleryContainerViewModel{
     
