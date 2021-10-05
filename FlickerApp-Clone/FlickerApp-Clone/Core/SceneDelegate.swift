@@ -13,13 +13,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-     
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
-               let window = UIWindow(windowScene: windowScene)
-               window.rootViewController = PhotoGalleryContainerViewController()
-               self.window = window
-               window.makeKeyAndVisible()
+        
+        let window = UIWindow(windowScene: windowScene)
+        let nav = UINavigationController(rootViewController: PhotoGalleryContainerViewController())
+        window.rootViewController = nav
+        self.window = window
+        window.makeKeyAndVisible()
         
     }
 
