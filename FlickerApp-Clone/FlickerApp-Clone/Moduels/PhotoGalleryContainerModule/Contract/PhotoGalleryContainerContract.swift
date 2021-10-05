@@ -23,6 +23,7 @@ protocol PhotoGalleryContainerViewControllerProtocol {
 
 //MARK: - ViewModel
 protocol PhotoGalleryContainerViewModelProtocol {
-    var searchText: BehaviorRelay<String> {get}
+    var searchText: BehaviorRelay<String?> {get}
+    var fetchSearchResults: BehaviorRelay<String?> {get}
 }
 

@@ -65,15 +65,13 @@ extension PhotoGalleryContainerViewController {
     
     
     private func bindSearhTextField() {
-        searchController.searchBar.rx.text
-            .do { [weak self](searchText) in
+        let searchTextField = searchController.searchBar.searchTextField
+        searchTextField.rx
+            .controlEvent([.editingDidEndOnExit])
+            .do { [weak self] _ in
                 guard let self = self else {return}
                 guard let viewModel = self.viewModel else {return}
-                if viewModel.searchText.value == searchText {
-                    return
-                }else{
-                    viewModel.searchText.accept(searchText ?? "")
-                }
+                viewModel.fetchSearchResults.accept(searchTextField.text)
             }
             .subscribe()
             .disposed(by: disposeBag)
