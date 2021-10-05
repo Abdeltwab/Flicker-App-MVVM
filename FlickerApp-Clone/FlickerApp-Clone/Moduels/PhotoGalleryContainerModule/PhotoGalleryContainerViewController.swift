@@ -9,16 +9,14 @@ import UIKit
 
 class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate {
     
-
-    
+    @IBOutlet weak var searchResultsContianerView: UIView!
     var searchController: UISearchController!
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
 }
 
 //MARK: - UI
