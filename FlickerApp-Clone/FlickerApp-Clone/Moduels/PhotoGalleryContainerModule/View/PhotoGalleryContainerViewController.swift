@@ -12,9 +12,11 @@ class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate
     @IBOutlet weak var searchResultsContianerView: UIView!
     var searchController: UISearchController!
     
+    let viewModel = PhotoGalleryContainerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.route(to: .photoGallery(view: searchResultsContianerView), from: self)
         setupUI()
     }
 }
