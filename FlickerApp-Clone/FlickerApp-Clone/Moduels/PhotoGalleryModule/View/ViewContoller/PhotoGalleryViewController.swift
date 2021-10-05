@@ -7,9 +7,10 @@
 
 import UIKit
 
-class PhotoGalleryViewController: UIViewController {
+class PhotoGalleryViewController: UIViewController,PhotoGalleryViewControllerProtocol {
     
-    
+    var viewModel: PhotoGalleryViewModel?
+        
     @IBOutlet weak var photoGalleryCollectionView: UICollectionView!
     
     override func viewDidLoad() {

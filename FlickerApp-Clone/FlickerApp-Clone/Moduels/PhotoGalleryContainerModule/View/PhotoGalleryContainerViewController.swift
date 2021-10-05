@@ -24,7 +24,7 @@ class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let viewModel = viewModel else {return}
-        viewModel.route(to: .photoGallery(view: searchResultsContianerView), from: self)
+        viewModel.route(to: .photoGallery(view: searchResultsContianerView, viewModel: viewModel), from: self)
         setupUI()
         setupUIBinding()
     }
