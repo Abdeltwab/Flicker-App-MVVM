@@ -21,5 +21,7 @@ protocol PhotoGalleryViewControllerProtocol {
 protocol PhotoGalleryViewModelProtocol: PhotoSearchProtocl {
 
     var fetchSearchResults: BehaviorRelay<String?> {get}
+    var dataSource : BehaviorRelay<[PhotoUIModel]> {get}
+
     init(viewModel:PhotoGalleryContainerViewModelProtocol)
 }
