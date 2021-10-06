@@ -207,8 +207,8 @@
 		4F22683F270A2C8400ED8009 /* PhotoSizes */ = {
 			isa = PBXGroup;
 			children = (
-				4F3720D7270DE8630023465B /* Domain */,
 				4F3720C9270DE36C0023465B /* Data */,
+				4F3720D7270DE8630023465B /* Domain */,
 			);
 			path = PhotoSizes;
 			sourceTree = "<group>";
