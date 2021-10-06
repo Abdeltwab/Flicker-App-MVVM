@@ -25,7 +25,6 @@ protocol PhotoGalleryContainerViewControllerProtocol {
 //MARK: - PhotoGalleryViewModel
 
 protocol PhotoGalleryContainerViewModelProtocol {
-    var searchText: BehaviorRelay<String?> {get}
     var fetchSearchResults: BehaviorRelay<String?> {get}
     func showPhotosGallery(context:UIViewController,photosContainerView:UIView)
 }

@@ -77,8 +77,6 @@ extension PhotoGalleryViewModel {
 extension PhotoGalleryViewModel {
     
     func navigateToPhotoDetails(context:UIViewController,photo:Photo){
-        //test
-        print(photo)
         self.route(to: .photoDetails(photo: photo), from: context)
     }
 }

@@ -8,17 +8,11 @@
 import RxSwift
 import RxCocoa
 
-class PhotoGalleryContainerViewModel:PhotoGalleryContainerViewModelProtocol {
-    let searchText = BehaviorRelay<String?>(value: "")
-    
+class PhotoGalleryContainerViewModel:PhotoGalleryContainerViewModelProtocol {    
     
     private let disposeBag = DisposeBag()
     let fetchSearchResults = BehaviorRelay<String?>(value: "Cat")
 
-     
-    init() {
-        //self.configureBinding()
-    }
 }
 
 
