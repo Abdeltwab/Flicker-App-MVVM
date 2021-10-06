@@ -13,7 +13,9 @@ extension PhotoGalleryViewModel{
           from context: UIViewController){
         switch route {
         case  let .photoDetails(photo):
-            break
+            let vc = PhotoDetailsViewController(nibName: "PhotoDetailsViewController", bundle: nil)
+            vc.viewModel = PhotoDetailsViewModel(photo: photo)
+            context.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

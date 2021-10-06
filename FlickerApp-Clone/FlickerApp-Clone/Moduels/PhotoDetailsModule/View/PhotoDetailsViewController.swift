@@ -7,11 +7,12 @@
 
 import UIKit
 
-class PhotoDetailsViewController: UIViewController {
+class PhotoDetailsViewController: UIViewController ,PhotoDetailsViewControllerProtocol {
+    
+    var viewModel: PhotoDetailsViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
 }
