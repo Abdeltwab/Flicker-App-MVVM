@@ -30,6 +30,7 @@
 		4F3720C1270CC5C30023465B /* PhotoGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F3720BF270CC5C30023465B /* PhotoGalleryCell.xib */; };
 		4F3720C4270CC7810023465B /* PhotoUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720C3270CC7810023465B /* PhotoUIModel.swift */; };
 		4F3720C8270DDA040023465B /* PhotoGalleryViewModel+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720C7270DDA040023465B /* PhotoGalleryViewModel+Routing.swift */; };
+		4F3720CC270DE4840023465B /* PhotoSizesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3720CB270DE4840023465B /* PhotoSizesEndPoint.swift */; };
 		4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE33270A03F600C3F848 /* AppDelegate.swift */; };
 		4F64BE36270A03F600C3F848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F64BE35270A03F600C3F848 /* SceneDelegate.swift */; };
 		4F64BE3D270A03F900C3F848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F64BE3C270A03F900C3F848 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		4F3720BF270CC5C30023465B /* PhotoGalleryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryCell.xib; sourceTree = "<group>"; };
 		4F3720C3270CC7810023465B /* PhotoUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUIModel.swift; sourceTree = "<group>"; };
 		4F3720C7270DDA040023465B /* PhotoGalleryViewModel+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoGalleryViewModel+Routing.swift"; sourceTree = "<group>"; };
+		4F3720CB270DE4840023465B /* PhotoSizesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSizesEndPoint.swift; sourceTree = "<group>"; };
 		4F64BE30270A03F600C3F848 /* FlickerApp-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickerApp-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F64BE33270A03F600C3F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F64BE35270A03F600C3F848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,7 +179,7 @@
 		4F22683B270A252D00ED8009 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4F22683F270A2C8400ED8009 /* PhotosDetails */,
+				4F22683F270A2C8400ED8009 /* PhotoSizes */,
 				4F22683E270A2C6B00ED8009 /* PhotosSearch */,
 			);
 			path = Modules;
@@ -192,17 +194,18 @@
 			path = PhotosSearch;
 			sourceTree = "<group>";
 		};
-		4F22683F270A2C8400ED8009 /* PhotosDetails */ = {
+		4F22683F270A2C8400ED8009 /* PhotoSizes */ = {
 			isa = PBXGroup;
 			children = (
+				4F3720C9270DE36C0023465B /* Data */,
 			);
-			path = PhotosDetails;
+			path = PhotoSizes;
 			sourceTree = "<group>";
 		};
 		4F226841270A2C9D00ED8009 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4F22684C270A5E2300ED8009 /* Models */,
+				4F22684C270A5E2300ED8009 /* Entitits */,
 				4F1BF339270A751200A0390F /* Services */,
 				4F1BF338270A750700A0390F /* EndPoints */,
 			);
@@ -217,14 +220,14 @@
 			path = CommonParamaters;
 			sourceTree = "<group>";
 		};
-		4F22684C270A5E2300ED8009 /* Models */ = {
+		4F22684C270A5E2300ED8009 /* Entitits */ = {
 			isa = PBXGroup;
 			children = (
 				4F1BF332270A70F800A0390F /* Photo.swift */,
 				4F1BF334270A73C100A0390F /* PhotoSearchResult.swift */,
 				4F1BF336270A743600A0390F /* SearchPhotos.swift */,
 			);
-			path = Models;
+			path = Entitits;
 			sourceTree = "<group>";
 		};
 		4F3720A1270C62120023465B /* View */ = {
@@ -303,6 +306,30 @@
 				4F3720C3270CC7810023465B /* PhotoUIModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4F3720C9270DE36C0023465B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720CD270DE5000023465B /* Entitits */,
+				4F3720CA270DE3760023465B /* EndPoints */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4F3720CA270DE3760023465B /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720CB270DE4840023465B /* PhotoSizesEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		4F3720CD270DE5000023465B /* Entitits */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entitits;
 			sourceTree = "<group>";
 		};
 		4F64BE27270A03F600C3F848 = {
@@ -517,6 +544,7 @@
 				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
 				4F1BF33C270A757900A0390F /* PhotoSearchProtocl.swift in Sources */,
 				4F64BE34270A03F600C3F848 /* AppDelegate.swift in Sources */,
+				4F3720CC270DE4840023465B /* PhotoSizesEndPoint.swift in Sources */,
 				4F226837270A1E7600ED8009 /* EndPointProtocol.swift in Sources */,
 				4F3720A9270C62F70023465B /* PhotoGalleryContainerViewModel.swift in Sources */,
 				4F1BF335270A73C100A0390F /* PhotoSearchResult.swift in Sources */,
