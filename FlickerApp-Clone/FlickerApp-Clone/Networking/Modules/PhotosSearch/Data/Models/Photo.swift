@@ -8,7 +8,15 @@
 import Foundation
 
 struct Photo: Codable {
-    let id: String
+    let id, secret, server: String
     let title: String
 }
+
+
+extension Photo{
+    var url:URL?{
+        return URL(string: APIConstant.flickerImageBaseURL.rawValue+"\(server)/"+"\(id)_\(secret).jpg")!
+    }
+}
+
 
