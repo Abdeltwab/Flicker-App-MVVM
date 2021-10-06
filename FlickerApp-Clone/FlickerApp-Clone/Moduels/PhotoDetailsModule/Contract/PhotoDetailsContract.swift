@@ -5,7 +5,7 @@
 //  Created by Abdeltawab Mohamed on 06/10/2021.
 //
 
-import Foundation
+import RxCocoa
 
 
 // MARK: - PhotoDetailsViewController
@@ -18,6 +18,9 @@ protocol PhotoDetailsViewControllerProtocol {
 
 protocol PhotoDetailsViewModelProtocol {
     
+    var fetchPhotoSizes: PublishRelay<Void> {get}
+    var currentPhoto : BehaviorRelay<UIImage?> {get}
+
     var photo: Photo {get set}
     init(photo:Photo)
 }

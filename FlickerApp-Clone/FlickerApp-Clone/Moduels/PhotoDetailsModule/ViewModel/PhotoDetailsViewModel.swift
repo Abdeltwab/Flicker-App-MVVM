@@ -5,10 +5,13 @@
 //  Created by Abdeltawab Mohamed on 06/10/2021.
 //
 
-import Foundation
+import RxCocoa
 
-final class PhotoDetailsViewModel:PhotoDetailsViewModelProtocol {    
-        
+final class PhotoDetailsViewModel:PhotoDetailsViewModelProtocol {
+    
+    let currentPhoto = BehaviorRelay<UIImage?>(value: nil)
+    let fetchPhotoSizes = PublishRelay<Void>()
+    
     var photo:Photo
     
     init(photo: Photo) {
@@ -17,5 +20,9 @@ final class PhotoDetailsViewModel:PhotoDetailsViewModelProtocol {
 }
 
 extension PhotoDetailsViewModel {
+    
+    private func getInitialPhoto(_ url:URL?){
+        //TODO : get first iamge
+    }
     
 }
