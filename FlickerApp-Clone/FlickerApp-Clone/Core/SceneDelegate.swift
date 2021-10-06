@@ -17,7 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let nav = UINavigationController(rootViewController: PhotoGalleryContainerViewController())
+        let vc = PhotoGalleryContainerViewController()
+        vc.viewModel = PhotoGalleryContainerViewModel()
+        let nav = UINavigationController(rootViewController: vc)
+    
         window.rootViewController = nav
         self.window = window
         window.makeKeyAndVisible()

@@ -7,18 +7,14 @@
 
 import UIKit
 
-
-enum PhotoGalleryContainerRoute{
-    case photoGallery(view:UIView)
-}
-
 extension PhotoGalleryContainerViewModel{
     
     func route (to route: PhotoGalleryContainerRoute,
           from context: UIViewController){
         switch route {
-        case  .photoGallery(let view):
+        case  .photoGallery(let view ,let viewModel):
             let vc = PhotoGalleryViewController(nibName: "PhotoGalleryViewController", bundle: nil)
+            vc.viewModel = PhotoGalleryViewModel(viewModel: viewModel)
             context.add(child: vc, at: view)
         }
     }

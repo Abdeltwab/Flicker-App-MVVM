@@ -5,26 +5,29 @@
 //  Created by Abdeltawab Mohamed on 04/10/2021.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
-class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate {
-    
-    @IBOutlet weak var searchResultsContianerView: UIView!
+class PhotoGalleryContainerViewController: UIViewController, UISearchBarDelegate, PhotoGalleryContainerViewControllerProtocol {
+    private let disposeBag = DisposeBag()
+    var viewModel: PhotoGalleryContainerViewModel?
+
+    @IBOutlet var searchResultsContianerView: UIView!
     var searchController: UISearchController!
-    
-    let viewModel = PhotoGalleryContainerViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.route(to: .photoGallery(view: searchResultsContianerView), from: self)
         setupUI()
+        setupUIBinding()
     }
 }
 
-//MARK: - UI
-extension PhotoGalleryContainerViewController{
-    
-    private func setupUI(){
+// MARK: - UI
+
+extension PhotoGalleryContainerViewController {
+    private func setupUI() {
+        addSubViews()
         setupNavigationBarTitle()
         setupSearchController()
     }
@@ -34,13 +37,42 @@ extension PhotoGalleryContainerViewController{
         searchController.view.backgroundColor = .white
         searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search PlacHolder"
-        searchController.hidesNavigationBarDuringPresentation = true
+        //TODO: -  Check why this dismss the Viewcontoller
+       searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.becomeFirstResponder()
+
     }
 
-    private func setupNavigationBarTitle(){
-        self.title = "Image Search"
+    private func setupNavigationBarTitle() {
+        title = "Image Search"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
+
+    private func addSubViews() {
+        guard let viewModel = self.viewModel else { return }
+        viewModel.showPhotosGallery(context: self, photosContainerView: searchResultsContianerView)
+    }
+}
+
+// MARK: Binding
+
+extension PhotoGalleryContainerViewController {
+    private func setupUIBinding() {
+        bindSearhTextField()
+    }
+
+    private func bindSearhTextField() {
+        let searchTextField = searchController.searchBar.searchTextField
+        searchTextField.rx
+            .controlEvent([.editingDidEndOnExit])
+            .do { [weak self] _ in
+                guard let self = self else { return }
+                guard let viewModel = self.viewModel else { return }
+                viewModel.fetchSearchResults.accept(searchTextField.text)
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
 }

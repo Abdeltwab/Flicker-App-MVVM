@@ -5,14 +5,16 @@
 //  Created by Abdeltawab Mohamed on 04/10/2021.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 protocol PhotoSearchProtocl {
 
     //MARK: - Methods
 
-    func searchPhotos(text:String,completion: @escaping CallBacksTypeAliase.photoSearchResultCallback)
+    func searchPhotos(text:String) -> Observable<(PhotoSearchResult?,Error?)>
     
+
     //MARK: - Services
     
     var service: PhotoSearchService {get}
@@ -21,15 +23,20 @@ protocol PhotoSearchProtocl {
 
 extension PhotoSearchProtocl {
     
-    func searchPhotos(text:String,completion: @escaping CallBacksTypeAliase.photoSearchResultCallback) {
-        service.serachPhotoByText(text) { result in
-            switch result {
-            case let .success(searchResuls):
-                completion(.success(searchResuls))
-            case let .failure(error):
-                completion(.failure(error))
+    func searchPhotos(text:String)-> Observable<(PhotoSearchResult?,Error?)> {
+        
+        return Observable.create { observer in
+            service.serachPhotoByText(text) { result in
+                switch result {
+                case let .success(searchResuls):
+                    observer.onNext((searchResuls,nil))
+                case let .failure(error):
+                    observer.onNext((nil,error))
+                }
             }
+            return Disposables.create()
         }
+       
     }
     
     private func test(){
