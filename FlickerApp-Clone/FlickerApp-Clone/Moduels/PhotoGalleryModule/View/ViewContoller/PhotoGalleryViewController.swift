@@ -59,7 +59,7 @@ extension PhotoGalleryViewController {
 extension PhotoGalleryViewController {
     
     private func setupUIBinding(){
-        
+        bindCollectionViewSelection()
         bindCollectionViewDataSource()
     }
     
@@ -85,26 +85,11 @@ extension PhotoGalleryViewController {
             .modelSelected(PhotoUIModel.self)
             .bind(onNext: { item in
                 switch item{
-                case .item(let product):break
-                  //  self.navigateToProductDetails(item: product)
+                case let .item(photo):
+                    guard let viewModel = self.viewModel else {return}
+                    viewModel.navigateToPhotoDetails(context: self, photo: photo)
                 case .skeleton:break
                 }
             }).disposed(by: disposeBag)
     }
-    
-    private func bindingCollectionViewScrolling() {
-//        productListCollectionView.rx
-//            .contentOffset
-//            .flatMap { _ in self.productListCollectionView.rx.reachedBottom }
-//            .skip(1)
-//            .subscribe(onNext: {[weak self] _ in
-//                guard let self = self else {return}
-//                guard let viewModel = self.viewModel else {return}
-//                let isLoading = viewModel.isLoading
-//                if !isLoading  {
-//                   viewModel.fetchNextPage.accept(())
-//                }
-//            }).disposed(by: disposeBag)
-    }
-    
 }

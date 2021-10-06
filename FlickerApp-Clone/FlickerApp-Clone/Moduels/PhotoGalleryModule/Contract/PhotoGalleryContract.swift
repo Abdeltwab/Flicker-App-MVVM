@@ -5,23 +5,25 @@
 //  Created by Abdeltawab Mohamed on 05/10/2021.
 //
 
-import RxSwift
 import RxCocoa
+import RxSwift
 
-
-
-
-protocol PhotoGalleryViewControllerProtocol {
-
-    var viewModel: PhotoGalleryViewModel? { get }
-    
+enum PhotoGalleryRoute {
+    case photoDetails(photo: Photo)
 }
 
+// MARK: - PhotoGalleryViewController
+
+protocol PhotoGalleryViewControllerProtocol {
+    var viewModel: PhotoGalleryViewModel? { get }
+}
+
+// MARK: - PhotoGalleryViewModel
 
 protocol PhotoGalleryViewModelProtocol: PhotoSearchProtocl {
+    var fetchSearchResults: BehaviorRelay<String?> { get }
+    var dataSource: BehaviorRelay<[PhotoUIModel]> { get }
 
-    var fetchSearchResults: BehaviorRelay<String?> {get}
-    var dataSource : BehaviorRelay<[PhotoUIModel]> {get}
-
-    init(viewModel:PhotoGalleryContainerViewModelProtocol)
+    init(viewModel: PhotoGalleryContainerViewModelProtocol)
+    func navigateToPhotoDetails(context: UIViewController, photo: Photo)
 }

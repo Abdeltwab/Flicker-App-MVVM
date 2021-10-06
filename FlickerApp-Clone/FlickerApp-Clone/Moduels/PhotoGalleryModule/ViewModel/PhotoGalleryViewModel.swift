@@ -70,3 +70,15 @@ extension PhotoGalleryViewModel {
         return res.photos.photo.compactMap { PhotoUIModel.item($0) }
     }
 }
+
+
+// MARK: - Navigation
+
+extension PhotoGalleryViewModel {
+    
+    func navigateToPhotoDetails(context:UIViewController,photo:Photo){
+        //test
+        print(photo)
+        self.route(to: .photoDetails(photo: photo), from: context)
+    }
+}
