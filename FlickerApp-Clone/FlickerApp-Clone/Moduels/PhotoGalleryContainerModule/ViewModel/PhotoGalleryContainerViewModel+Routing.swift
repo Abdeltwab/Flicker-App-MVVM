@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 extension PhotoGalleryContainerViewModel{
     
     func route (to route: PhotoGalleryContainerRoute,

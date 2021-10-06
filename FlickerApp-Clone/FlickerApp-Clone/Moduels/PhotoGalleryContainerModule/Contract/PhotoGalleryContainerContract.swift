@@ -14,6 +14,7 @@ enum PhotoGalleryContainerRoute{
     case photoGallery(view:UIView,viewModel:PhotoGalleryContainerViewModel)
 }
 
+//MARK: - PhotoGalleryContainerView
 
 protocol PhotoGalleryContainerViewControllerProtocol {
     
@@ -21,9 +22,11 @@ protocol PhotoGalleryContainerViewControllerProtocol {
 
 }
 
-//MARK: - ViewModel
+//MARK: - PhotoGalleryViewModel
+
 protocol PhotoGalleryContainerViewModelProtocol {
     var searchText: BehaviorRelay<String?> {get}
     var fetchSearchResults: BehaviorRelay<String?> {get}
+    func showPhotosGallery(context:UIViewController,photosContainerView:UIView)
 }
 
