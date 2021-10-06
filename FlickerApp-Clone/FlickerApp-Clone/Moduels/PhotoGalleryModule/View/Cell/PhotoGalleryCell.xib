@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="168" height="189"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LJX-Gh-6GV" userLabel="loader">
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="LJX-Gh-6GV" userLabel="loader">
                         <rect key="frame" x="74" y="84" width="20" height="20"/>
                         <color key="color" systemColor="systemPinkColor"/>
                     </activityIndicatorView>
@@ -36,6 +36,11 @@
                 <constraint firstItem="Qpa-Bx-HbH" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="ko4-vI-iIK"/>
             </constraints>
             <size key="customSize" width="168" height="189"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="LJX-Gh-6GV"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="activityIndicator" destination="LJX-Gh-6GV" id="G7h-Tz-vtt"/>
                 <outlet property="photoImgView" destination="Qpa-Bx-HbH" id="Cph-cH-kJ0"/>

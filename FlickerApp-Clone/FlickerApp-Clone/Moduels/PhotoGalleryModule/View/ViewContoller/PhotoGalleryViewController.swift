@@ -69,13 +69,9 @@ extension PhotoGalleryViewController {
             .bind(to: photoGalleryCollectionView.rx.items) { collectionView, index, item in
                 let indexPath = IndexPath(row: index, section: 0)
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(PhotoGalleryCell.self)", for: indexPath) as? PhotoGalleryCell ?? PhotoGalleryCell()
-
                 switch item {
                 case .item(let photo):
-//                    cell.setup(with: photo)
-                    //temp
-                    cell.setupSkeletonCell()
-
+                    cell.setup(with: photo)
                     return cell
                 case .skeleton:
                     cell.setupSkeletonCell()
@@ -85,15 +81,15 @@ extension PhotoGalleryViewController {
     }
     
     private func bindCollectionViewSelection(){
-//        productListCollectionView.rx
-//            .modelSelected(ProductListItemUIModel.self)
-//            .bind(onNext: { item in
-//                switch item{
-//                case .item(let product):
-//                    self.navigateToProductDetails(item: product)
-//                case .skeleton:break
-//                }
-//            }).disposed(by: disposeBag)
+        photoGalleryCollectionView.rx
+            .modelSelected(PhotoUIModel.self)
+            .bind(onNext: { item in
+                switch item{
+                case .item(let product):break
+                  //  self.navigateToProductDetails(item: product)
+                case .skeleton:break
+                }
+            }).disposed(by: disposeBag)
     }
     
     private func bindingCollectionViewScrolling() {

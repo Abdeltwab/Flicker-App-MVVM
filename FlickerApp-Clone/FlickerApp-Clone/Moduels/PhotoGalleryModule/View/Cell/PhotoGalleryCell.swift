@@ -18,17 +18,16 @@ class PhotoGalleryCell: UICollectionViewCell {
 extension PhotoGalleryCell{
     
     func setup(with photo:Photo){
-        self.loadImage(urlString: "dumy URL")
+        self.loadImage(url: photo.url)
     }
     
     func setupSkeletonCell(){
-        self.photoImgView.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
     }
     
-    private func loadImage(urlString: String){
-        guard let url = URL(string: urlString) else {return}
-        //TODO: -  laod image here
+    private func loadImage(url: URL?){
+        guard let url = url else {return}
+        self.activityIndicator.stopAnimating()
+        photoImgView.kf.setImage(with: url)
     }
 }

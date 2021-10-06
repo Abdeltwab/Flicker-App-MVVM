@@ -45,16 +45,15 @@ extension PhotoGalleryViewModel {
             .disposed(by: disposeBag)
     }
     
-    
     private func handleSucessPhotoFetching(res:PhotoSearchResult){
         self.deleteSkeletonCells()
-        //TODO : Handle sucess fetch here
-        //temp for testing
-        self.addSkeletonCells(count: res.photos.total)
+        let photosUIModels = self.mapToPhotoUIModel(res: res)
+        self.dataSource.accept(photosUIModels)
+
     }
     
-    private func addSkeletonCells(count:Int = 10){
-        let skeltonCellCount = count
+    private func addSkeletonCells(){
+        let skeltonCellCount = 10
         var result = self.dataSource.value
         var skeltonArray:[PhotoUIModel] = []
         for _ in 1...skeltonCellCount {
@@ -68,6 +67,10 @@ extension PhotoGalleryViewModel {
         var result = self.dataSource.value
         result = result.filter{ $0 != .skeleton}
         self.dataSource.accept(result)
+    }
+    
+    private func mapToPhotoUIModel(res:PhotoSearchResult) -> [PhotoUIModel]{
+       return res.photos.photo.compactMap { PhotoUIModel.item($0)}
     }
 
 }
