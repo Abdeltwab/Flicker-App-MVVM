@@ -10,4 +10,6 @@ import Foundation
 
 enum CallBacksTypeAliase {
     typealias photoSearchResultCallback = ((Result<PhotoSearchResult, Error>) -> Void)
+    typealias photoSizesResponseCallback = ((Result<PhotoSizesResponse, Error>) -> Void)
+
 }
