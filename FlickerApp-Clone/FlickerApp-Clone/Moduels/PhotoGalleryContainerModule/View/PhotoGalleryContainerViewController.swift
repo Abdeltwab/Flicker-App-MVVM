@@ -37,8 +37,12 @@ extension PhotoGalleryContainerViewController {
         searchController.view.backgroundColor = .white
         searchController.searchBar.delegate = self
         searchController.searchBar.placeholder = "Search PlacHolder"
-        searchController.hidesNavigationBarDuringPresentation = true
+        //TODO: -  Check why this dismss the Viewcontoller
+       searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.becomeFirstResponder()
+
     }
 
     private func setupNavigationBarTitle() {
