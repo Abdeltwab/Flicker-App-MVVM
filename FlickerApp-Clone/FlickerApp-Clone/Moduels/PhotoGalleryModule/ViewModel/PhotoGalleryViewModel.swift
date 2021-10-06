@@ -27,7 +27,7 @@ extension PhotoGalleryViewModel {
         fetchSearchResults
             .filter { $0 != nil }
             .filter { !$0!.isEmpty }.map { $0! }
-            .flatMap({ [weak self] query -> Observable<(PhotoSearchResult?, Error?)> in
+            .flatMap({ [weak self] query -> Observable<(PhotoSearchResponse?, Error?)> in
                 guard let self = self else { return Observable.empty() }
                 self.addSkeletonCells()
                 return self.searchPhotos(text: query)
@@ -43,7 +43,7 @@ extension PhotoGalleryViewModel {
             .disposed(by: disposeBag)
     }
 
-    private func handleSucessPhotoFetching(res: PhotoSearchResult) {
+    private func handleSucessPhotoFetching(res: PhotoSearchResponse) {
         deleteSkeletonCells()
         let photosUIModels = mapToPhotoUIModel(res: res)
         dataSource.accept(photosUIModels)
@@ -66,8 +66,8 @@ extension PhotoGalleryViewModel {
         dataSource.accept(result)
     }
 
-    private func mapToPhotoUIModel(res: PhotoSearchResult) -> [PhotoUIModel] {
-        return res.photos.photo.compactMap { PhotoUIModel.item($0) }
+    private func mapToPhotoUIModel(res: PhotoSearchResponse) -> [PhotoUIModel] {
+        return res.photoResults.photos.compactMap { PhotoUIModel.item($0) }
     }
 }
 

@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct PhotoSearchResult :Codable {
+struct PhotoSearchResponse :Codable {
     
-    let photos: Photos
+    let photoResults: photoSearchResults
     let status: String
     
     enum CodingKeys: String, CodingKey{
-        case photos
+        case photoResults = "photos"
         case status = "stat"
     }
 }

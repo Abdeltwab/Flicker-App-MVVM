@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct Photos: Codable {
+struct photoSearchResults: Codable {
     let page: Int
     let pages: Int
     let perpage: Int
     let total: Int
-    let photo: [Photo]
+    let photos: [Photo]
+    
+    
+    enum CodingKeys: String, CodingKey{
+        case page,pages,perpage,total
+        case photos = "photo"
+    }
 }

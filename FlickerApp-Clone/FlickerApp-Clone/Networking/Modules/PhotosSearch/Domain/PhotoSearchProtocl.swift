@@ -12,7 +12,7 @@ protocol PhotoSearchProtocl {
 
     //MARK: - Methods
 
-    func searchPhotos(text:String) -> Observable<(PhotoSearchResult?,Error?)>
+    func searchPhotos(text:String) -> Observable<(PhotoSearchResponse?,Error?)>
     
 
     //MARK: - Services
@@ -23,7 +23,7 @@ protocol PhotoSearchProtocl {
 
 extension PhotoSearchProtocl {
     
-    func searchPhotos(text:String)-> Observable<(PhotoSearchResult?,Error?)> {
+    func searchPhotos(text:String)-> Observable<(PhotoSearchResponse?,Error?)> {
         
         return Observable.create { observer in
             service.serachPhotoByText(text) { result in
