@@ -20,7 +20,7 @@ final class PhotoGalleryViewModel: PhotoGalleryViewModelProtocol {
     }
 }
 
-// MARK: - Data Hanlding
+// MARK: - Data Handling
 
 extension PhotoGalleryViewModel {
     private func configureBinding() {
