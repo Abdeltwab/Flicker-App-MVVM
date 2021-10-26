@@ -14,13 +14,13 @@ final class PhotoGalleryViewModel: PhotoGalleryViewModelProtocol {
     let service = PhotoSearchService()
     let dataSource = BehaviorRelay<[PhotoUIModel]>(value: [])
 
-    init(viewModel: PhotoGalleryContainerViewModelProtocol) {
-        fetchSearchResults = viewModel.fetchSearchResults
+    init(fetchSearchResults: BehaviorRelay<String?>) {
+        self.fetchSearchResults = fetchSearchResults
         configureBinding()
     }
 }
 
-// MARK: - Data Hanlding
+// MARK: - Data Handling
 
 extension PhotoGalleryViewModel {
     private func configureBinding() {

@@ -13,6 +13,11 @@ class PhotoGalleryCell: UICollectionViewCell {
     @IBOutlet weak var photoImgView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    override func prepareForReuse() {
+        photoImgView.image = nil
+        photoImgView.kf.cancelDownloadTask()
+    }
+    
 }
 
 extension PhotoGalleryCell{
