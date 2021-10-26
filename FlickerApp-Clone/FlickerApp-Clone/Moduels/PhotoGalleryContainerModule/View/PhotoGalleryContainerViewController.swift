@@ -67,6 +67,7 @@ extension PhotoGalleryContainerViewController {
         let searchTextField = searchController.searchBar.searchTextField
         searchTextField.rx
             .controlEvent([.editingDidEndOnExit])
+            .observe(on: MainScheduler.instance)
             .do { [weak self] _ in
                 guard let self = self else { return }
                 guard let viewModel = self.viewModel else { return }

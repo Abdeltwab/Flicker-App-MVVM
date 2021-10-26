@@ -95,6 +95,7 @@ extension PhotoDetailsViewController {
     private func bindPhotoImageView(){
         guard let viewModel = self.viewModel else {return}
         viewModel.currentPhoto
+            .observe(on: MainScheduler.instance)
             .bind { [weak self] image in
                 guard let self = self else {return}
                 guard let img = image else {return}
@@ -105,6 +106,7 @@ extension PhotoDetailsViewController {
     
     private func bindGetPhotoSizesBtnTap(){
         getPhotoSizesBtn.rx.tap
+            .observe(on: MainScheduler.instance)
             .bind(onNext: { [weak self] _ in
                 guard let self = self else {return}
 //                guard let viewModel = self.viewModel  else {return}
