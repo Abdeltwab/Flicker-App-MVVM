@@ -12,9 +12,9 @@ extension PhotoGalleryContainerViewModel{
     func route (to route: PhotoGalleryContainerRoute,
           from context: UIViewController){
         switch route {
-        case  .photoGallery(let view ,let viewModel):
+        case  .photoGallery(let view ,let fetchSearchResults):
             let vc = PhotoGalleryViewController(nibName: "PhotoGalleryViewController", bundle: nil)
-            vc.viewModel = PhotoGalleryViewModel(viewModel: viewModel)
+            vc.viewModel = PhotoGalleryViewModel(fetchSearchResults: fetchSearchResults)
             context.add(child: vc, at: view)
         }
     }

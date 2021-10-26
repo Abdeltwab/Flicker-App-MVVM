@@ -14,8 +14,8 @@ final class PhotoGalleryViewModel: PhotoGalleryViewModelProtocol {
     let service = PhotoSearchService()
     let dataSource = BehaviorRelay<[PhotoUIModel]>(value: [])
 
-    init(viewModel: PhotoGalleryContainerViewModelProtocol) {
-        fetchSearchResults = viewModel.fetchSearchResults
+    init(fetchSearchResults: BehaviorRelay<String?>) {
+        self.fetchSearchResults = fetchSearchResults
         configureBinding()
     }
 }

@@ -21,6 +21,6 @@ class PhotoGalleryContainerViewModel:PhotoGalleryContainerViewModelProtocol {
 extension PhotoGalleryContainerViewModel {
     
     func showPhotosGallery(context:UIViewController,photosContainerView:UIView){
-        self.route(to: .photoGallery(view: photosContainerView, viewModel: self), from: context)
+        self.route(to: .photoGallery(view: photosContainerView, fetchSearchResults: self.fetchSearchResults), from: context)
     }
 }

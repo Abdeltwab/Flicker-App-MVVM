@@ -11,7 +11,7 @@ import RxCocoa
 
 
 enum PhotoGalleryContainerRoute{
-    case photoGallery(view:UIView,viewModel:PhotoGalleryContainerViewModel)
+    case photoGallery(view:UIView, fetchSearchResults: BehaviorRelay<String?>)
 }
 
 //MARK: - PhotoGalleryContainerView
