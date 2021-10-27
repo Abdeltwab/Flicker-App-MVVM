@@ -23,6 +23,8 @@ class APIService<T> where T:EndPointProtocol {
                 guard let data = data else {
                     preconditionFailure("No error was received but we also don't have data...")
                 }
+                let json = String(data: data, encoding: .utf8)
+                print(json ?? "")
                 let decodedObject = try JSONDecoder().decode(D.self, from: data)
                 
                 completion(.success(decodedObject))
