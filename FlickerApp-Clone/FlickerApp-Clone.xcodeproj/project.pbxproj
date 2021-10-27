@@ -206,8 +206,6 @@
 		4F22683E270A2C6B00ED8009 /* PhotosSearch */ = {
 			isa = PBXGroup;
 			children = (
-				4F226841270A2C9D00ED8009 /* Data */,
-				4F1BF33A270A756600A0390F /* Domain */,
 			);
 			path = PhotosSearch;
 			sourceTree = "<group>";
@@ -221,14 +219,13 @@
 			path = PhotoSizes;
 			sourceTree = "<group>";
 		};
-		4F226841270A2C9D00ED8009 /* Data */ = {
+		4F226841270A2C9D00ED8009 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				4F22684C270A5E2300ED8009 /* Entitits */,
-				4F1BF339270A751200A0390F /* Services */,
+				4F22684C270A5E2300ED8009 /* Models */,
 				4F1BF338270A750700A0390F /* EndPoints */,
 			);
-			path = Data;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		4F226845270A2FEA00ED8009 /* CommonParamaters */ = {
@@ -239,14 +236,14 @@
 			path = CommonParamaters;
 			sourceTree = "<group>";
 		};
-		4F22684C270A5E2300ED8009 /* Entitits */ = {
+		4F22684C270A5E2300ED8009 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4F1BF332270A70F800A0390F /* Photo.swift */,
 				4F1BF334270A73C100A0390F /* PhotoSearchResponse.swift */,
 				4F1BF336270A743600A0390F /* photoSearchResults.swift */,
 			);
-			path = Entitits;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4F3720A1270C62120023465B /* View */ = {
@@ -477,6 +474,9 @@
 			isa = PBXGroup;
 			children = (
 				4FF4AAAE2729CD1300D92F20 /* Presentation */,
+				4FF4AAAF2729CD6100D92F20 /* UseCase */,
+				4F226841270A2C9D00ED8009 /* Entities */,
+				4FF4AAB02729CDE400D92F20 /* Testing */,
 			);
 			path = PhotoGalleryModule;
 			sourceTree = "<group>";
@@ -507,6 +507,22 @@
 				4F3720B0270C655A0023465B /* View */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4AAAF2729CD6100D92F20 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4F1BF339270A751200A0390F /* Services */,
+				4F1BF33A270A756600A0390F /* Domain */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		4FF4AAB02729CDE400D92F20 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 		BB1B1AA28D6E70BC61F779B6 /* Pods */ = {
