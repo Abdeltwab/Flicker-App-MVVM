@@ -47,6 +47,8 @@
 		4F730F5C270B041C00418D8C /* PhotoGalleryContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F730F5A270B041C00418D8C /* PhotoGalleryContainerViewController.swift */; };
 		4F730F5D270B041C00418D8C /* PhotoGalleryContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F730F5B270B041C00418D8C /* PhotoGalleryContainerViewController.xib */; };
 		4FF4AAB82729D3C700D92F20 /* PhotoSeachResults.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FF4AAB72729D3C700D92F20 /* PhotoSeachResults.json */; };
+		4FF4AABB2729D71900D92F20 /* MockPhotoGalleryUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4AABA2729D71900D92F20 /* MockPhotoGalleryUseCases.swift */; };
+		4FF4AABE2729D90600D92F20 /* PhotoGalleryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4AABD2729D90600D92F20 /* PhotoGalleryViewModelTest.swift */; };
 		DC5C1F00B3745F9A7A1FAFF2 /* Pods_FlickerApp_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F842AC9D0F9AC61ADBFAC3 /* Pods_FlickerApp_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		4F730F5A270B041C00418D8C /* PhotoGalleryContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryContainerViewController.swift; sourceTree = "<group>"; };
 		4F730F5B270B041C00418D8C /* PhotoGalleryContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryContainerViewController.xib; sourceTree = "<group>"; };
 		4FF4AAB72729D3C700D92F20 /* PhotoSeachResults.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PhotoSeachResults.json; sourceTree = "<group>"; };
+		4FF4AABA2729D71900D92F20 /* MockPhotoGalleryUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoGalleryUseCases.swift; sourceTree = "<group>"; };
+		4FF4AABD2729D90600D92F20 /* PhotoGalleryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModelTest.swift; sourceTree = "<group>"; };
 		E0F842AC9D0F9AC61ADBFAC3 /* Pods_FlickerApp_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerApp_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -470,7 +474,9 @@
 		4FF4AAB02729CDE400D92F20 /* Testing */ = {
 			isa = PBXGroup;
 			children = (
-				4FF4AAB62729D35400D92F20 /* Resources */,
+				4FF4AABC2729D8DB00D92F20 /* PhotoGalleryTest */,
+				4FF4AAB92729D65300D92F20 /* MockUseCases */,
+				4FF4AAB62729D35400D92F20 /* MockEntities */,
 			);
 			path = Testing;
 			sourceTree = "<group>";
@@ -520,12 +526,28 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4FF4AAB62729D35400D92F20 /* Resources */ = {
+		4FF4AAB62729D35400D92F20 /* MockEntities */ = {
 			isa = PBXGroup;
 			children = (
 				4FF4AAB72729D3C700D92F20 /* PhotoSeachResults.json */,
 			);
-			path = Resources;
+			path = MockEntities;
+			sourceTree = "<group>";
+		};
+		4FF4AAB92729D65300D92F20 /* MockUseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4FF4AABA2729D71900D92F20 /* MockPhotoGalleryUseCases.swift */,
+			);
+			path = MockUseCases;
+			sourceTree = "<group>";
+		};
+		4FF4AABC2729D8DB00D92F20 /* PhotoGalleryTest */ = {
+			isa = PBXGroup;
+			children = (
+				4FF4AABD2729D90600D92F20 /* PhotoGalleryViewModelTest.swift */,
+			);
+			path = PhotoGalleryTest;
 			sourceTree = "<group>";
 		};
 		BB1B1AA28D6E70BC61F779B6 /* Pods */ = {
@@ -660,6 +682,8 @@
 				4F3720C0270CC5C30023465B /* PhotoGalleryCell.swift in Sources */,
 				4F3720C4270CC7810023465B /* PhotoUIModel.swift in Sources */,
 				4F1BF337270A743600A0390F /* photoSearchResults.swift in Sources */,
+				4FF4AABE2729D90600D92F20 /* PhotoGalleryViewModelTest.swift in Sources */,
+				4FF4AABB2729D71900D92F20 /* MockPhotoGalleryUseCases.swift in Sources */,
 				4F1BF33F270A762A00A0390F /* CallBacksTypeAliase.swift in Sources */,
 				4F226844270A2CB900ED8009 /* PhotoSearchEndPoint.swift in Sources */,
 				4F22683A270A209900ED8009 /* APIService.swift in Sources */,
