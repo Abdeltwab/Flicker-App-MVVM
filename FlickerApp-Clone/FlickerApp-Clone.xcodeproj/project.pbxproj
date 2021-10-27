@@ -151,22 +151,13 @@
 		4F226830270A16B800ED8009 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				4F22683B270A252D00ED8009 /* Modules */,
-				4F226831270A17A900ED8009 /* Shared  */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		4F226831270A17A900ED8009 /* Shared  */ = {
-			isa = PBXGroup;
-			children = (
 				4F1BF33D270A75FB00A0390F /* Typealias */,
 				4F226845270A2FEA00ED8009 /* CommonParamaters */,
 				4F226838270A207D00ED8009 /* APIManger */,
 				4F226835270A1E2A00ED8009 /* EndPointProtocol */,
 				4F226832270A1D3000ED8009 /* Constants */,
 			);
-			path = "Shared ";
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		4F226832270A1D3000ED8009 /* Constants */ = {
@@ -194,41 +185,13 @@
 			path = APIManger;
 			sourceTree = "<group>";
 		};
-		4F22683B270A252D00ED8009 /* Modules */ = {
+		4F226841270A2C9D00ED8009 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				4F22683F270A2C8400ED8009 /* PhotoSizes */,
-				4F22683E270A2C6B00ED8009 /* PhotosSearch */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		4F22683E270A2C6B00ED8009 /* PhotosSearch */ = {
-			isa = PBXGroup;
-			children = (
-				4F226841270A2C9D00ED8009 /* Data */,
-				4F1BF33A270A756600A0390F /* Domain */,
-			);
-			path = PhotosSearch;
-			sourceTree = "<group>";
-		};
-		4F22683F270A2C8400ED8009 /* PhotoSizes */ = {
-			isa = PBXGroup;
-			children = (
-				4F3720C9270DE36C0023465B /* Data */,
-				4F3720D7270DE8630023465B /* Domain */,
-			);
-			path = PhotoSizes;
-			sourceTree = "<group>";
-		};
-		4F226841270A2C9D00ED8009 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				4F22684C270A5E2300ED8009 /* Entitits */,
-				4F1BF339270A751200A0390F /* Services */,
+				4F22684C270A5E2300ED8009 /* Models */,
 				4F1BF338270A750700A0390F /* EndPoints */,
 			);
-			path = Data;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		4F226845270A2FEA00ED8009 /* CommonParamaters */ = {
@@ -239,14 +202,14 @@
 			path = CommonParamaters;
 			sourceTree = "<group>";
 		};
-		4F22684C270A5E2300ED8009 /* Entitits */ = {
+		4F22684C270A5E2300ED8009 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4F1BF332270A70F800A0390F /* Photo.swift */,
 				4F1BF334270A73C100A0390F /* PhotoSearchResponse.swift */,
 				4F1BF336270A743600A0390F /* photoSearchResults.swift */,
 			);
-			path = Entitits;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4F3720A1270C62120023465B /* View */ = {
@@ -327,32 +290,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F3720C9270DE36C0023465B /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				4F3720D4270DE77F0023465B /* Services */,
-				4F3720CD270DE5000023465B /* Entitits */,
-				4F3720CA270DE3760023465B /* EndPoints */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		4F3720CA270DE3760023465B /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
 				4F3720CB270DE4840023465B /* PhotoSizesEndPoint.swift */,
 			);
 			path = EndPoints;
-			sourceTree = "<group>";
-		};
-		4F3720CD270DE5000023465B /* Entitits */ = {
-			isa = PBXGroup;
-			children = (
-				4F3720CE270DE61F0023465B /* PhotoSizesResponse.swift */,
-				4F3720D0270DE67F0023465B /* PhotoSizesResults.swift */,
-				4F3720D2270DE6D20023465B /* PhotoSize.swift */,
-			);
-			path = Entitits;
 			sourceTree = "<group>";
 		};
 		4F3720D4270DE77F0023465B /* Services */ = {
@@ -374,9 +317,10 @@
 		4F3720DA270DF6CA0023465B /* PhotoDetailsModule */ = {
 			isa = PBXGroup;
 			children = (
-				4F3720E3270DF7580023465B /* Contract */,
-				4F3720E0270DF7340023465B /* ViewModel */,
-				4F3720DB270DF6E00023465B /* View */,
+				4FF4AAB12729CE8500D92F20 /* Presentation */,
+				4FF4AAB22729CE9B00D92F20 /* UseCases */,
+				4FF4AAB32729CEAC00D92F20 /* Entities */,
+				4FF4AAB42729CECB00D92F20 /* Testing */,
 			);
 			path = PhotoDetailsModule;
 			sourceTree = "<group>";
@@ -467,9 +411,8 @@
 		4F730F57270B026100418D8C /* PhotoGalleryContainerModule */ = {
 			isa = PBXGroup;
 			children = (
-				4F3720B4270C97920023465B /* Contract */,
-				4F3720A7270C62E50023465B /* ViewModel */,
-				4F3720A1270C62120023465B /* View */,
+				4FF4AAAA2729CC0400D92F20 /* Presentation */,
+				4FF4AAAD2729CC2400D92F20 /* Testing */,
 			);
 			path = PhotoGalleryContainerModule;
 			sourceTree = "<group>";
@@ -477,12 +420,101 @@
 		4F730F59270B029F00418D8C /* PhotoGalleryModule */ = {
 			isa = PBXGroup;
 			children = (
+				4FF4AAAE2729CD1300D92F20 /* Presentation */,
+				4FF4AAAF2729CD6100D92F20 /* UseCase */,
+				4F226841270A2C9D00ED8009 /* Entities */,
+				4FF4AAB02729CDE400D92F20 /* Testing */,
+			);
+			path = PhotoGalleryModule;
+			sourceTree = "<group>";
+		};
+		4FF4AAAA2729CC0400D92F20 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720B4270C97920023465B /* Contract */,
+				4F3720A7270C62E50023465B /* ViewModel */,
+				4F3720A1270C62120023465B /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4AAAD2729CC2400D92F20 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		4FF4AAAE2729CD1300D92F20 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
 				4F3720C2270CC7720023465B /* Model */,
 				4F3720BB270CB6360023465B /* Contract */,
 				4F3720B8270CB4350023465B /* ViewModel */,
 				4F3720B0270C655A0023465B /* View */,
 			);
-			path = PhotoGalleryModule;
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4AAAF2729CD6100D92F20 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4F1BF339270A751200A0390F /* Services */,
+				4F1BF33A270A756600A0390F /* Domain */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		4FF4AAB02729CDE400D92F20 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		4FF4AAB12729CE8500D92F20 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720E3270DF7580023465B /* Contract */,
+				4F3720E0270DF7340023465B /* ViewModel */,
+				4F3720DB270DF6E00023465B /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4AAB22729CE9B00D92F20 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720D4270DE77F0023465B /* Services */,
+				4F3720D7270DE8630023465B /* Domain */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		4FF4AAB32729CEAC00D92F20 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4FF4AAB52729CF0B00D92F20 /* Models */,
+				4F3720CA270DE3760023465B /* EndPoints */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4FF4AAB42729CECB00D92F20 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		4FF4AAB52729CF0B00D92F20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720CE270DE61F0023465B /* PhotoSizesResponse.swift */,
+				4F3720D0270DE67F0023465B /* PhotoSizesResults.swift */,
+				4F3720D2270DE6D20023465B /* PhotoSize.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BB1B1AA28D6E70BC61F779B6 /* Pods */ = {
