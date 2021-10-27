@@ -467,9 +467,8 @@
 		4F730F57270B026100418D8C /* PhotoGalleryContainerModule */ = {
 			isa = PBXGroup;
 			children = (
-				4F3720B4270C97920023465B /* Contract */,
-				4F3720A7270C62E50023465B /* ViewModel */,
-				4F3720A1270C62120023465B /* View */,
+				4FF4AAAA2729CC0400D92F20 /* Presentation */,
+				4FF4AAAD2729CC2400D92F20 /* Testing */,
 			);
 			path = PhotoGalleryContainerModule;
 			sourceTree = "<group>";
@@ -483,6 +482,23 @@
 				4F3720B0270C655A0023465B /* View */,
 			);
 			path = PhotoGalleryModule;
+			sourceTree = "<group>";
+		};
+		4FF4AAAA2729CC0400D92F20 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F3720B4270C97920023465B /* Contract */,
+				4F3720A7270C62E50023465B /* ViewModel */,
+				4F3720A1270C62120023465B /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4FF4AAAD2729CC2400D92F20 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 		BB1B1AA28D6E70BC61F779B6 /* Pods */ = {
