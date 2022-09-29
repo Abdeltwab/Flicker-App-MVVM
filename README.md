@@ -13,6 +13,22 @@ The goal for this app is to practice several iOS topics like :
 3. Kingfisher for Image Operations .
 4. UIKit  for Interface .
 
+
+#### Screens   :
+
+<table>
+  <tr>
+    <td>Search Screen while Loading  </td>
+     <td>Search Screen</td>
+     <td>Photo Details Screen</td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/16858825/136264127-149a4085-8d0d-48f3-9d56-cbb61d1038f4.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/16858825/136264142-da00e60f-0247-477e-90de-8fd3e64dd6fb.png" width=270 height=480></td>
+    <td><img src="https://user-images.githubusercontent.com/16858825/136264184-48ce7c94-9d15-435a-8337-02b3f0376787.png" width=270 height=480></td>
+  </tr>
+ </table>
+
 ### Architecture  Design Patter 
 
 MVVM Design Pattern 
@@ -64,28 +80,6 @@ example :
 
  -  Kingfisher is being used for Handling image Downloading and Caching  
 
-#### Screens   :
-
-<table>
-  <tr>
-    <td>Search Screen while Loading  </td>
-     <td>Search Screen</td>
-     <td>Photo Details Screen</td>
-  </tr>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/16858825/136264127-149a4085-8d0d-48f3-9d56-cbb61d1038f4.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/16858825/136264142-da00e60f-0247-477e-90de-8fd3e64dd6fb.png" width=270 height=480></td>
-    <td><img src="https://user-images.githubusercontent.com/16858825/136264184-48ce7c94-9d15-435a-8337-02b3f0376787.png" width=270 height=480></td>
-  </tr>
- </table>
-
-
-### TODO Features and Enhancements 
-
-- Implement  `getPhotoSizes()` Feature 
-- Implement  image perfecting  
-- enhance the UI 
-- handle network Errors
 
 
 
