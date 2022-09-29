@@ -5,24 +5,8 @@
 This is a Demo app that utlize [Flicker API ](https://www.flickr.com) to search free images and download them.
 The goal for this app is to practice several iOS topics like :
 
-- Reactive Programming APIs (Rxswit , combine )
-- MVVM Architecture Design pattern 
-- Callbacks , Delegates.
-- SwiftUIViews.
-- Images Downloading and Caching optimization techniques.
-- and more .... 
 
-Instead of Combining these techniques in one project , I preferred to select sub sets from them and create a full release of the app with them , to make sure covered good and full use cases of each skill or technology.
-
-## Pervious Release 
-
--  no releases yet 
-
-## Current In progress release  
-
-### 1.0.0 (Callback + Rxswift +UIKit )
-
-It use the following combination of technologies : 
+## Tech Stack 
 
 1. Rxswift for the business and UI layer.
 2. Callbacks for Networking layer.
